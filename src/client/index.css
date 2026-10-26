@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  --brand-primary: #306DFA;
+  --brand-secondary: #486ACC;
+  --brand-navy: #082A5E;
+  --brand-dark: #101013;
+  --brand-surface: #F8F8F9;
+}
+
+body {
+  background-color: var(--brand-surface);
+  color: var(--brand-dark);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.brand-bg-primary {
+  background-color: var(--brand-primary);
+}
+
+.brand-bg-navy {
+  background-color: var(--brand-navy);
+}
+
+.brand-text-primary {
+  color: var(--brand-primary);
+}
+
+.brand-border-primary {
+  border-color: var(--brand-primary);
+}
+
+.brand-gradient-hero {
+  background: linear-gradient(135deg, var(--brand-navy) 0%, #0f2f6d 52%, var(--brand-primary) 100%);
+}
+
+.brand-soft-tint {
+  background-color: color-mix(in srgb, var(--brand-primary) 8%, white);
+}
+
+.brand-soft-border {
+  border-color: color-mix(in srgb, var(--brand-primary) 26%, #e2e8f0);
+}
+
+.brand-ring-focus:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-card-enter {
+  animation: fadeSlideUp 0.24s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+  }
+}
