@@ -1,0 +1,22 @@
+services:
+  msdis-brief:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: msdis-smart-brief
+    restart: unless-stopped
+    ports:
+      - "${PORT:-3000}:3000"
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+      - HOST=0.0.0.0
+      - PORT=3000
+      - DATA_DIR=/app/data
+    volumes:
+      - msdis_brief_data:/app/data
+
+volumes:
+  msdis_brief_data:
+    name: msdis_brief_data
