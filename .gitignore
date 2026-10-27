@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Личные срезы рынка: сырые выгрузки и отчёты по ним не коммитим
+raw_vacancies.json
+my_vacancies.txt
+*.html
+reports/my*.md
+reports/my*.json
+
+# Сохранённые страницы hh.ru и токены
+saved_*.html
+.env
+*token*
